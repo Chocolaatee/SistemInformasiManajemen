@@ -1,0 +1,60 @@
+<!-- Divisi -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Divisi - SIMKAR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar (sama seperti index.html) -->
+    
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>Data Divisi</h4>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahDivisi">
+                    Tambah Divisi
+                </button>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama Divisi</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="divisi-tbody">
+                        <!-- Isi tabel -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Divisi -->
+    <div class="modal fade" id="tambahDivisi">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Divisi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="tambahDivisiForm">
+                        <div class="mb-3">
+                            <label class="form-label">Nama Divisi</label>
+                            <input type="text" class="form-control" id="divisi-nama">
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="addDivisi(event)">Simpan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
